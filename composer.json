@@ -19,7 +19,8 @@
       "core/request.php",
       "core/response.php",
       "core/route.php",
-      "core/toCamelCase.php"
+      "core/toCamelCase.php",
+      "core/view.php"
     ]
   }
 }

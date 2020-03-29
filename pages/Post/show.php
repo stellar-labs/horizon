@@ -2,10 +2,10 @@
 
 namespace Controller\Post;
 
-use function Horizon\response;
+use function Horizon\view;
 
 if (!function_exists("show")) {
 	function show() {
-		return response(["text" => "show post", "status" => 200]);
+		return view("post.show");
 	}
 }
