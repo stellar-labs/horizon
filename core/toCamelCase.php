@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework;
+namespace Horizon;
 
 if (!function_exists("toCamelCase")) {
 	function toCamelCase(string $string): string {

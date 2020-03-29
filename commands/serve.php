@@ -2,8 +2,8 @@
 
 namespace Command;
 
-use function Framework\dd;
-use function Framework\request;
+use function Horizon\dd;
+use function Horizon\request;
 
 if (!function_exists("serve")) {
 	function serve() {

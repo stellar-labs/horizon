@@ -2,9 +2,9 @@
 
 namespace Controller\Post;
 
-use function Framework\response;
-use function Framework\request;
-use function Framework\dd;
+use function Horizon\response;
+use function Horizon\request;
+use function Horizon\dd;
 
 if (!function_exists("index")) {
 	function index(){

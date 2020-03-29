@@ -2,7 +2,7 @@
 
 namespace Controller\Post;
 
-use function Framework\response;
+use function Horizon\response;
 
 if (!function_exists("show")) {
 	function show() {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Framework;
+namespace Horizon;
 
 use InvalidArgumentException;
-use function Framework\response;
-use function Framework\dd;
+use function Horizon\response;
+use function Horizon\dd;
 
 if (!\function_exists("listen")) {
 	function listen(array $routes) {

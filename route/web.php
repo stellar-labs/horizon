@@ -1,8 +1,8 @@
 <?php
 
-use function Framework\route;
-use function Framework\response;
-use function Framework\listen;
+use function Horizon\route;
+use function Horizon\response;
+use function Horizon\listen;
 use function Controller\Post\index;
 use function Controller\Post\show;
 

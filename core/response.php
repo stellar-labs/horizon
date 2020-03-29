@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework;
+namespace Horizon;
 
 if (!\function_exists("response")) {
 	function response(array $parameters): void {

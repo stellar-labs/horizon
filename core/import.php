@@ -1,8 +1,8 @@
 <?php
 
-namespace Framework;
+namespace Horizon;
 
-use function Framework\listDirectoryRecursive;
+use function Horizon\listDirectoryRecursive;
 
 if (!function_exists("import")) {
 	function import() {

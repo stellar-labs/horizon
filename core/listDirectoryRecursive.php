@@ -1,8 +1,8 @@
 <?php
 
-namespace Framework;
+namespace Horizon;
 
-use function Framework\dd;
+use function Horizon\dd;
 
 if (!\function_exists("listDirectoryRecursive")) {
 	function listDirectoryRecursive(string $directoryPath) {

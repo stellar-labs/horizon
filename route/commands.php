@@ -1,7 +1,7 @@
 <?php
 
-use function Framework\listen;
-use function Framework\route;
+use function Horizon\listen;
+use function Horizon\route;
 use function Command\serve;
 
 listen([

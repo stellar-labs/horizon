@@ -2,7 +2,7 @@
 
 require __DIR__ . "/../vendor/autoload.php";
 
-use function Framework\import;
+use function Horizon\import;
 
 import();
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace Framework;
+namespace Horizon;
 
 use stdClass;
-use Framework\dd;
-use Framework\toCamelCase;
+use Horizon\dd;
+use Horizon\toCamelCase;
 
 if (!function_exists("request")) {
 	function request(): stdClass {

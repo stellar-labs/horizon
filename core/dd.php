@@ -1,6 +1,6 @@
 <?php
 
-namespace Framework;
+namespace Horizon;
 
 if (!function_exists("dd")) {
 	function dd($mixed) {
