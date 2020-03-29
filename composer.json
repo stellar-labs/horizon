@@ -15,7 +15,8 @@
       "core/listen.php",
       "core/request.php",
       "core/response.php",
-      "core/route.php"
+      "core/route.php",
+      "core/toCamelCase.php"
     ]
   }
 }
