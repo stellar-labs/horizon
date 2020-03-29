@@ -9,6 +9,7 @@
   },
   "autoload": {
     "files": [
+      "core/configuration.php",
       "core/dd.php",
       "core/import.php",
       "core/listDirectoryRecursive.php",
