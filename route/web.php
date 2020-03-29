@@ -5,6 +5,7 @@ use function Horizon\response;
 use function Horizon\listen;
 use function Controller\Post\index;
 use function Controller\Post\show;
+use function Controller\Employee\index as employeeIndex;
 
 listen([
 		route([
@@ -22,5 +23,10 @@ listen([
 			"route" => "/post/1",
 			"callback" => fn() => show(),
 		]),
+		route([
+			"method" => "GET",
+			"route" => "/employees",
+			"callback" => fn() => employeeIndex(),
+		])
 	],
 );

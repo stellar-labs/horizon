@@ -11,6 +11,8 @@
     "files": [
       "core/configuration.php",
       "core/dd.php",
+      "core/getPdo.php",
+      "core/getRecords.php",
       "core/import.php",
       "core/listDirectoryRecursive.php",
       "core/listen.php",
