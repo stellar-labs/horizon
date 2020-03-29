@@ -22,10 +22,10 @@ if (!\function_exists("listen")) {
 			foreach ($routes as $route) {
 				if ($route["route"] === $inputRoute) {
 					return $route["callback"]($arguments);
-				} else {
-					throw new InvalidArgumentException("You ran php run $inputRoute, but there is not command matching it");
 				}
 			}
+
+			throw new InvalidArgumentException("You ran php run $inputRoute, but there is not command matching it");
 		} else {
 			$method = $_SERVER["REQUEST_METHOD"];
 			$url = $_SERVER["REQUEST_URI"];
