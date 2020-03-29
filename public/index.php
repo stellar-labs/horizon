@@ -6,4 +6,4 @@ use function Framework\import;
 
 import();
 
-include __DIR__ . "/../route/routes.php";
+include __DIR__ . "/../route/web.php";

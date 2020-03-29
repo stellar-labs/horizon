@@ -11,5 +11,11 @@ if (!function_exists("import")) {
 		foreach ($files as $file) {
 			require_once $file;
 		}
+
+		$files = listDirectoryRecursive(__DIR__ . "/../commands");
+		
+		foreach ($files as $file) {
+			require_once $file;
+		}
 	}
 }

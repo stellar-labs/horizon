@@ -1,0 +1,10 @@
+<?php
+
+require __DIR__ . "/vendor/autoload.php";
+
+use function Framework\import;
+use function Framework\dd;
+
+import();
+
+include __DIR__ . "/route/commands.php";
