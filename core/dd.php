@@ -6,6 +6,10 @@ namespace Horizon;
 
 use php_sapi_name;
 
+if (function_exists("dd")) {
+    throw new Exception("The dd function has already been defined.");
+}
+
 /**
  * Debug and die
  * @param mixed $input The value to debug
