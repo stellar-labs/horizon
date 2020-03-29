@@ -1,0 +1,21 @@
+{
+  "name": "framework/framework",
+  "description": "Functional PHP Framework",
+  "type": "project",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "require": {
+    "php": ">=7.4.0"
+  },
+  "autoload": {
+    "files": [
+      "core/dd.php",
+      "core/import.php",
+      "core/listDirectoryRecursive.php",
+      "core/listen.php",
+      "core/request.php",
+      "core/response.php",
+      "core/route.php"
+    ]
+  }
+}
