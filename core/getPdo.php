@@ -3,6 +3,7 @@
 namespace Horizon;
 
 use PDO;
+use InvalidArgumentException;
 use function Horizon\configuration;
 
 if (!\function_exists("getPdo")) {
@@ -19,7 +20,7 @@ if (!\function_exists("getPdo")) {
 				PDO::ATTR_TIMEOUT => $timeout,
 			]);
 		} else {
-			throw new Exception("database driver $driver not supported");
+			throw new InvalidArgumentException("database driver $driver not supported");
 		}
 
 		return $pdo;
