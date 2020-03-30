@@ -1,6 +1,6 @@
 # :sunrise: horizon
 
-## :worker: Development
+## :construction_worker: Development
 
 ### :pushpin: Requirements
 
