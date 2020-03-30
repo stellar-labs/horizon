@@ -33,7 +33,7 @@ function dd($input): void
 
     if (php_sapi_name() === "cli") {
         // If we are in CLI
-        echo $code;
+        echo $code . PHP_EOL;
     } else {
         // If we are not in CLI
         echo "<pre><code>$code</code></pre>";
