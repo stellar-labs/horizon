@@ -1,22 +1,22 @@
 <?php
 
-use function Horizon\expectStrictlyEqual;
+use function Horizon\Assertion\strictlyEqual;
 use function Horizon\toCamelCase;
 
 function itShouldReturnAnEmptyString(): void {
-	expectStrictlyEqual("", toCamelCase(""));
+	strictlyEqual("", toCamelCase(""));
 }
 
 function itShouldReturnTheSameString(): void {
-	expectStrictlyEqual("foo", toCamelCase("foo"));
+	strictlyEqual("foo", toCamelCase("foo"));
 }
 
 function itShouldTurnSnakeCase(): void {
-	expectStrictlyEqual("fooBar", toCamelCase("foo_bar"));
+	strictlyEqual("fooBar", toCamelCase("foo_bar"));
 }
 
 function itShouldTurnUppercasedSnakeCase(): void {
-	expectStrictlyEqual("fooBar", toCamelCase("FOO_BAR"));
+	strictlyEqual("fooBar", toCamelCase("FOO_BAR"));
 }
 
 itShouldReturnAnEmptyString();
