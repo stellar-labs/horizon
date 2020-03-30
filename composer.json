@@ -18,6 +18,7 @@
       "core/Assertion/strictlyTrue.php",
       "core/Assertion/throws.php",
       "core/Assertion/isTrue.php",
+      "core/Assertion/isInstanceOf.php",
       "core/configuration.php",
       "core/dd.php",
       "core/endsWith.php",
