@@ -2,8 +2,10 @@
 
 namespace Horizon;
 
-if (!function_exists("route")) {
-	function route(array $parameters): array {
-		return $parameters;
-	}
+use function Horizon\checkFunctionDoNotExist;
+
+checkFunctionDoNotExist("route");
+
+function route(array $parameters): array {
+	return $parameters;
 }

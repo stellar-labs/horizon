@@ -2,15 +2,16 @@
 
 namespace Controller\Post;
 
+use function Horizon\dd;
 use function Horizon\view;
 use function Horizon\request;
-use function Horizon\dd;
+use function Horizon\checkFunctionDoNotExist;
 
-if (!function_exists("index")) {
-	function index(){
-		$request = request();
-		$method = $request->server->requestMethod;
+checkFunctionDoNotExist("index");
 
-		return view("post.index");
-	}
+function index(){
+	$request = request();
+	$method = $request->server->requestMethod;
+
+	return view("post.index");
 }

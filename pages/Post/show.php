@@ -3,9 +3,10 @@
 namespace Controller\Post;
 
 use function Horizon\view;
+use function Horizon\checkFunctionDoNotExist;
 
-if (!function_exists("show")) {
-	function show() {
-		return view("post.show");
-	}
+checkFunctionDoNotExist("show");
+
+function show() {
+	return view("post.show");
 }

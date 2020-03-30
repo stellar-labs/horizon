@@ -9,7 +9,9 @@
   },
   "autoload": {
     "files": [
+      "core/checkFunctionDoNotExist.php",
       "core/Assertion/different.php",
+      "core/Assertion/dontThrows.php",
       "core/Assertion/equal.php",
       "core/Assertion/isFalse.php",
       "core/Assertion/strictlyDifferent.php",

@@ -3,48 +3,48 @@
 namespace Horizon;
 
 use stdClass;
-use Horizon\dd;
-use Horizon\toCamelCase;
+use function Horizon\toCamelCase;
+use function Horizon\checkFunctionDoNotExist;
 
-if (!function_exists("request")) {
-	function request(): stdClass {
-		$request = new stdClass;
+checkFunctionDoNotExist("request");
 
-		if (\php_sapi_name() === "cli") {
-			global $argv;
+function request(): stdClass {
+	$request = new stdClass;
 
-			$arguments = array_slice($argv, 2);
-			$numberOfArguments = count($arguments);
+	if (\php_sapi_name() === "cli") {
+		global $argv;
 
-			for ($i = 0; $i < $numberOfArguments; $i++) {
-				$argument = $arguments[$i];
+		$arguments = array_slice($argv, 2);
+		$numberOfArguments = count($arguments);
 
-				if (substr($argument, 0, 2) === "--") {
-					$argumentName = substr($argument, 2);
-					
-					if (isset($arguments[$i + 1])) {
-						$nextArgument = $arguments[$i + 1];
-						$request->$argumentName = $nextArgument;
-					} else {
-						$request->$argumentName = true;
-					}
+		for ($i = 0; $i < $numberOfArguments; $i++) {
+			$argument = $arguments[$i];
+
+			if (substr($argument, 0, 2) === "--") {
+				$argumentName = substr($argument, 2);
+				
+				if (isset($arguments[$i + 1])) {
+					$nextArgument = $arguments[$i + 1];
+					$request->$argumentName = $nextArgument;
+				} else {
+					$request->$argumentName = true;
 				}
-			}
-		} else {
-			foreach ($GLOBALS as $group => $values) {
-				$groupName = substr(\strtolower($group), 1);
-				$data = new stdClass;
-	
-				foreach ($values as $key => $value) {
-					$key = toCamelCase($key);
-	
-					$data->$key = $value;
-				}
-	
-				$request->$groupName = $data;
 			}
 		}
+	} else {
+		foreach ($GLOBALS as $group => $values) {
+			$groupName = substr(\strtolower($group), 1);
+			$data = new stdClass;
 
-		return $request;
+			foreach ($values as $key => $value) {
+				$key = toCamelCase($key);
+
+				$data->$key = $value;
+			}
+
+			$request->$groupName = $data;
+		}
 	}
+
+	return $request;
 }

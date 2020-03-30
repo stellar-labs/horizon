@@ -3,13 +3,14 @@
 namespace Horizon\Assertion;
 
 use Exception;
+use function Horizon\checkFunctionDoNotExist;
 
-if (!function_exists("throws")) {
-	function throws(callable $function): void {
-		try {
-			$function();
+checkFunctionDoNotExist("throws");
 
-			assert(false, "expect function to throw an exception");
-		} catch (Exception $exception) {}
-	}
+function throws(callable $function): void {
+	try {
+		$function();
+
+		assert(false, "expect function to throw an exception");
+	} catch (Exception $exception) {}
 }
