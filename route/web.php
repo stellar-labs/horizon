@@ -1,32 +1,25 @@
 <?php
 
+use function Horizon\view;
 use function Horizon\route;
-use function Horizon\response;
 use function Horizon\listen;
-use function Controller\Post\index;
-use function Controller\Post\show;
-use function Controller\Employee\index as employeeIndex;
 
 listen([
 		route([
 			"method" => "GET",
 			"route" => "/",
-			"callback" => fn() => response(["text" => "hello world", "status" => 200]),
+			"callback" => fn() => view("index", [
+				"menus" => [
+					[
+						"text" => "Documentation",
+						"href" => "https://github.com/stellar-labs/horizon"
+					],
+					[
+						"text" => "Support",
+						"href" => "https://github.com/stellar-labs/horizon/issues",
+					],
+				],
+			]),
 		]),
-		route([
-			"method" => "GET",
-			"route" => "/post",
-			"callback" => fn() => index(),
-		]),
-		route([
-			"method" => "GET",
-			"route" => "/post/1",
-			"callback" => fn() => show(),
-		]),
-		route([
-			"method" => "GET",
-			"route" => "/employees",
-			"callback" => fn() => employeeIndex(),
-		])
 	],
 );
