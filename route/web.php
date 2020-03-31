@@ -1,5 +1,6 @@
 <?php
 
+use function Horizon\translate;
 use function Horizon\view;
 use function Horizon\route;
 use function Horizon\listen;
@@ -11,11 +12,11 @@ listen([
 			"callback" => fn() => view("index", [
 				"menus" => [
 					[
-						"text" => "Documentation",
+						"text" => translate("Documentation"),
 						"href" => "https://github.com/stellar-labs/horizon"
 					],
 					[
-						"text" => "Support",
+						"text" => translate("Support"),
 						"href" => "https://github.com/stellar-labs/horizon/issues",
 					],
 				],

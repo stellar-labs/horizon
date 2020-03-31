@@ -2,4 +2,5 @@
 
 return [
 	"name" => "Horizon",
+	"lang" => "en",
 ];

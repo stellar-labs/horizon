@@ -26,6 +26,7 @@
       "core/endsWith.php",
       "core/getPdo.php",
       "core/getRecords.php",
+      "core/hasConfiguration.php",
       "core/import.php",
       "core/line.php",
       "core/listDirectoryRecursive.php",
@@ -34,6 +35,7 @@
       "core/response.php",
       "core/route.php",
       "core/toCamelCase.php",
+      "core/translate.php",
       "core/view.php"
     ]
   }
