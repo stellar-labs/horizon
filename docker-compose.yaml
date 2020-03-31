@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+    php:
+        image: php
+        tty: true
+        user: 1000:1000
+        entrypoint: php
+        working_dir: /home/www-data
+        volumes:
+            - .:/home/www-data
+
+    composer:
+        image: composer
+        user: 1000:1000
+        tty: true
+        entrypoint: composer
+        working_dir: /home/www-data
+        volumes:
+            - .:/home/www-data
