@@ -18,4 +18,3 @@ function serve() {
 
 	exec("php -S localhost:$port -t public");
 }
-

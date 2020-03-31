@@ -27,6 +27,7 @@
       "core/getPdo.php",
       "core/getRecords.php",
       "core/import.php",
+      "core/line.php",
       "core/listDirectoryRecursive.php",
       "core/listen.php",
       "core/request.php",
